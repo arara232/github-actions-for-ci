@@ -31,8 +31,9 @@ jobs:
         node-version: [12.x, 14.x]
         os: [ ubuntu-latest, windows-2016 ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    needs: build
     steps:
+    
     - name: Download a Build Artifact
       uses: actions/download-artifact@v3.0.0
       with:
